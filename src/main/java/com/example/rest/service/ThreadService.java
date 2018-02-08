@@ -8,6 +8,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
+/**
+ * A service that performs operations using threads.
+ */
 @Service
 public class ThreadService {
 	private static final Logger LOG = LoggerFactory.getLogger(ThreadService.class);
@@ -15,6 +18,9 @@ public class ThreadService {
 	private static final String DEADLOCK_MESSAGE = "Deadlock occurred in threads %s and %s";
 	private static final String NO_DEADLOCK_MESSAGE = "Deadlock did not occur";
 
+	/**
+	 * Starts two threads that will eventually cause a deadlock condition.
+	 */
 	public void startDeadlock() {
 		final Object lock1 = new Object();
 		final Object lock2 = new Object();
@@ -57,6 +63,10 @@ public class ThreadService {
 		thread2.start();
 	}
 
+	/**
+	 * Detects any threads that are deadlocked in the running application.
+	 * @return A message that indicates if a deadlock condition was detected.
+	 */
 	public String detectDeadlock() {
 		try {
 			LOG.info("Waiting for deadlock to occur before detection");
