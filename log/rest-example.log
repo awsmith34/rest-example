@@ -1365,3 +1365,1025 @@ Consider defining a bean of type 'org.springframework.web.client.RestTemplate' i
 2018-02-08 09:03:58.788  INFO 48408 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2018-02-08 09:03:58.788  INFO 48408 --- [RMI TCP Connection(2)-127.0.0.1] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
 2018-02-08 09:03:58.790  INFO 48408 --- [RMI TCP Connection(2)-127.0.0.1] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-02-08 09:11:27.195  INFO 48726 --- [main] com.example.rest.RestExampleApplication  : Starting RestExampleApplication v0.0.1-SNAPSHOT on Andrews-MBP with PID 48726 (/Users/andrewsmith/workspaces/sandbox/rest-example/target/rest-example-0.0.1-SNAPSHOT.jar started by andrewsmith in /Users/andrewsmith/workspaces/sandbox/rest-example)
+2018-02-08 09:11:27.199 DEBUG 48726 --- [main] com.example.rest.RestExampleApplication  : Running with Spring Boot v1.5.10.RELEASE, Spring v4.3.14.RELEASE
+2018-02-08 09:11:27.200  INFO 48726 --- [main] com.example.rest.RestExampleApplication  : No active profile set, falling back to default profiles: default
+2018-02-08 09:11:27.270  INFO 48726 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1698c449: startup date [Thu Feb 08 09:11:27 CST 2018]; root of context hierarchy
+2018-02-08 09:11:28.122  INFO 48726 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-02-08 09:11:28.717  INFO 48726 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-02-08 09:11:28.733  INFO 48726 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-02-08 09:11:28.735  INFO 48726 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.27
+2018-02-08 09:11:28.860  INFO 48726 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-02-08 09:11:28.860  INFO 48726 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1593 ms
+2018-02-08 09:11:28.883 ERROR 48726 --- [localhost-startStop-1] o.s.b.c.embedded.tomcat.TomcatStarter    : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'org.springframework.boot.autoconfigure.jersey.JerseyAutoConfiguration': Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jerseyConfig': Failed to introspect bean class [com.example.rest.JerseyConfig] for lookup method metadata: could not find class that it depends on; nested exception is java.lang.NoClassDefFoundError: org/glassfish/hk2/api/ServiceLocator
+2018-02-08 09:11:28.928  WARN 48726 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is org.springframework.boot.context.embedded.EmbeddedServletContainerException: Unable to start embedded Tomcat
+2018-02-08 09:11:28.935  INFO 48726 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2018-02-08 09:11:28.944 ERROR 48726 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is org.springframework.boot.context.embedded.EmbeddedServletContainerException: Unable to start embedded Tomcat
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:137) ~[spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:537) ~[spring-context-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at com.example.rest.RestExampleApplication.main(RestExampleApplication.java:10) [classes!/:0.0.1-SNAPSHOT]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_144]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_144]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_144]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_144]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48) [rest-example-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87) [rest-example-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:50) [rest-example-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:51) [rest-example-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+Caused by: org.springframework.boot.context.embedded.EmbeddedServletContainerException: Unable to start embedded Tomcat
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.initialize(TomcatEmbeddedServletContainer.java:123) ~[spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.<init>(TomcatEmbeddedServletContainer.java:84) ~[spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.getTomcatEmbeddedServletContainer(TomcatEmbeddedServletContainerFactory.java:554) ~[spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.getEmbeddedServletContainer(TomcatEmbeddedServletContainerFactory.java:179) ~[spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.createEmbeddedServletContainer(EmbeddedWebApplicationContext.java:164) ~[spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:134) ~[spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	... 16 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.jersey.JerseyAutoConfiguration': Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jerseyConfig': Failed to introspect bean class [com.example.rest.JerseyConfig] for lookup method metadata: could not find class that it depends on; nested exception is java.lang.NoClassDefFoundError: org/glassfish/hk2/api/ServiceLocator
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:749) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:189) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1193) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1095) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:372) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:234) ~[spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:215) ~[spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addServletContextInitializerBeans(ServletContextInitializerBeans.java:91) ~[spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:79) ~[spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.getServletContextInitializerBeans(EmbeddedWebApplicationContext.java:241) ~[spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.selfInitialize(EmbeddedWebApplicationContext.java:228) ~[spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.access$000(EmbeddedWebApplicationContext.java:89) ~[spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext$1.onStartup(EmbeddedWebApplicationContext.java:213) ~[spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:55) ~[spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5196) ~[tomcat-embed-core-8.5.27.jar!/:8.5.27]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) ~[tomcat-embed-core-8.5.27.jar!/:8.5.27]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1419) ~[tomcat-embed-core-8.5.27.jar!/:8.5.27]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1409) ~[tomcat-embed-core-8.5.27.jar!/:8.5.27]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_144]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_144]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_144]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_144]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jerseyConfig': Failed to introspect bean class [com.example.rest.JerseyConfig] for lookup method metadata: could not find class that it depends on; nested exception is java.lang.NoClassDefFoundError: org/glassfish/hk2/api/ServiceLocator
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:269) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1118) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1091) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:835) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:741) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	... 35 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/glassfish/hk2/api/ServiceLocator
+	at java.lang.Class.getDeclaredMethods0(Native Method) ~[na:1.8.0_144]
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701) ~[na:1.8.0_144]
+	at java.lang.Class.getDeclaredMethods(Class.java:1975) ~[na:1.8.0_144]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:613) ~[spring-core-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:524) ~[spring-core-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:537) ~[spring-core-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:510) ~[spring-core-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:247) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	... 48 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.glassfish.hk2.api.ServiceLocator
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381) ~[na:1.8.0_144]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_144]
+	at org.springframework.boot.loader.LaunchedURLClassLoader.loadClass(LaunchedURLClassLoader.java:94) ~[rest-example-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_144]
+	... 56 common frames omitted
+
+2018-02-08 09:30:27.045  INFO 48776 --- [main] com.example.rest.RestExampleApplication  : Starting RestExampleApplication on Andrews-MBP with PID 48776 (/Users/andrewsmith/workspaces/sandbox/rest-example/target/classes started by andrewsmith in /Users/andrewsmith/workspaces/sandbox/rest-example)
+2018-02-08 09:30:27.050 DEBUG 48776 --- [main] com.example.rest.RestExampleApplication  : Running with Spring Boot v1.5.10.RELEASE, Spring v4.3.14.RELEASE
+2018-02-08 09:30:27.050  INFO 48776 --- [main] com.example.rest.RestExampleApplication  : No active profile set, falling back to default profiles: default
+2018-02-08 09:30:27.095  INFO 48776 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@167f947d: startup date [Thu Feb 08 09:30:27 CST 2018]; root of context hierarchy
+2018-02-08 09:30:27.868  INFO 48776 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-02-08 09:30:28.083  WARN 48776 --- [main] o.h.v.m.ParameterMessageInterpolator     : HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-02-08 09:30:28.334  INFO 48776 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-02-08 09:30:28.347  INFO 48776 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-02-08 09:30:28.348  INFO 48776 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.27
+2018-02-08 09:30:28.433  INFO 48776 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-02-08 09:30:28.434  INFO 48776 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1339 ms
+2018-02-08 09:30:28.468 ERROR 48776 --- [localhost-startStop-1] o.s.b.c.embedded.tomcat.TomcatStarter    : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'org.springframework.boot.autoconfigure.jersey.JerseyAutoConfiguration': Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jerseyConfig': Failed to introspect bean class [com.example.rest.JerseyConfig] for lookup method metadata: could not find class that it depends on; nested exception is java.lang.NoClassDefFoundError: org/glassfish/hk2/api/ServiceLocator
+2018-02-08 09:30:28.509  WARN 48776 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is org.springframework.boot.context.embedded.EmbeddedServletContainerException: Unable to start embedded Tomcat
+2018-02-08 09:30:28.518  INFO 48776 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2018-02-08 09:30:28.527 ERROR 48776 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is org.springframework.boot.context.embedded.EmbeddedServletContainerException: Unable to start embedded Tomcat
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:137) ~[spring-boot-1.5.10.RELEASE.jar:1.5.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:537) ~[spring-context-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.5.10.RELEASE.jar:1.5.10.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.10.RELEASE.jar:1.5.10.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.10.RELEASE.jar:1.5.10.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.10.RELEASE.jar:1.5.10.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.10.RELEASE.jar:1.5.10.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.10.RELEASE.jar:1.5.10.RELEASE]
+	at com.example.rest.RestExampleApplication.main(RestExampleApplication.java:10) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_144]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_144]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_144]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_144]
+	at org.springframework.boot.maven.AbstractRunMojo$LaunchRunner.run(AbstractRunMojo.java:527) [spring-boot-maven-plugin-1.5.10.RELEASE.jar:1.5.10.RELEASE]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_144]
+Caused by: org.springframework.boot.context.embedded.EmbeddedServletContainerException: Unable to start embedded Tomcat
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.initialize(TomcatEmbeddedServletContainer.java:123) ~[spring-boot-1.5.10.RELEASE.jar:1.5.10.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.<init>(TomcatEmbeddedServletContainer.java:84) ~[spring-boot-1.5.10.RELEASE.jar:1.5.10.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.getTomcatEmbeddedServletContainer(TomcatEmbeddedServletContainerFactory.java:554) ~[spring-boot-1.5.10.RELEASE.jar:1.5.10.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.getEmbeddedServletContainer(TomcatEmbeddedServletContainerFactory.java:179) ~[spring-boot-1.5.10.RELEASE.jar:1.5.10.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.createEmbeddedServletContainer(EmbeddedWebApplicationContext.java:164) ~[spring-boot-1.5.10.RELEASE.jar:1.5.10.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:134) ~[spring-boot-1.5.10.RELEASE.jar:1.5.10.RELEASE]
+	... 14 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.jersey.JerseyAutoConfiguration': Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jerseyConfig': Failed to introspect bean class [com.example.rest.JerseyConfig] for lookup method metadata: could not find class that it depends on; nested exception is java.lang.NoClassDefFoundError: org/glassfish/hk2/api/ServiceLocator
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:749) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:189) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1193) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1095) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:372) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:234) ~[spring-boot-1.5.10.RELEASE.jar:1.5.10.RELEASE]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:215) ~[spring-boot-1.5.10.RELEASE.jar:1.5.10.RELEASE]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addServletContextInitializerBeans(ServletContextInitializerBeans.java:91) ~[spring-boot-1.5.10.RELEASE.jar:1.5.10.RELEASE]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:79) ~[spring-boot-1.5.10.RELEASE.jar:1.5.10.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.getServletContextInitializerBeans(EmbeddedWebApplicationContext.java:241) ~[spring-boot-1.5.10.RELEASE.jar:1.5.10.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.selfInitialize(EmbeddedWebApplicationContext.java:228) ~[spring-boot-1.5.10.RELEASE.jar:1.5.10.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.access$000(EmbeddedWebApplicationContext.java:89) ~[spring-boot-1.5.10.RELEASE.jar:1.5.10.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext$1.onStartup(EmbeddedWebApplicationContext.java:213) ~[spring-boot-1.5.10.RELEASE.jar:1.5.10.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:55) ~[spring-boot-1.5.10.RELEASE.jar:1.5.10.RELEASE]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5196) ~[tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) ~[tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1419) ~[tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1409) ~[tomcat-embed-core-8.5.27.jar:8.5.27]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_144]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_144]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_144]
+	... 1 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jerseyConfig': Failed to introspect bean class [com.example.rest.JerseyConfig] for lookup method metadata: could not find class that it depends on; nested exception is java.lang.NoClassDefFoundError: org/glassfish/hk2/api/ServiceLocator
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:269) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1118) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1091) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:835) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:741) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	... 35 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/glassfish/hk2/api/ServiceLocator
+	at java.lang.Class.getDeclaredMethods0(Native Method) ~[na:1.8.0_144]
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701) ~[na:1.8.0_144]
+	at java.lang.Class.getDeclaredMethods(Class.java:1975) ~[na:1.8.0_144]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:613) ~[spring-core-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:524) ~[spring-core-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:537) ~[spring-core-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:510) ~[spring-core-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:247) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	... 48 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.glassfish.hk2.api.ServiceLocator
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381) ~[na:1.8.0_144]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_144]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_144]
+	... 56 common frames omitted
+
+2018-02-08 09:35:02.902  INFO 48812 --- [main] com.example.rest.RestExampleApplication  : Starting RestExampleApplication v0.0.1-SNAPSHOT on Andrews-MBP with PID 48812 (/Users/andrewsmith/workspaces/sandbox/rest-example/target/rest-example-0.0.1-SNAPSHOT.jar started by andrewsmith in /Users/andrewsmith/workspaces/sandbox/rest-example)
+2018-02-08 09:35:02.913 DEBUG 48812 --- [main] com.example.rest.RestExampleApplication  : Running with Spring Boot v1.5.10.RELEASE, Spring v4.3.14.RELEASE
+2018-02-08 09:35:02.913  INFO 48812 --- [main] com.example.rest.RestExampleApplication  : No active profile set, falling back to default profiles: default
+2018-02-08 09:35:02.982  INFO 48812 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1698c449: startup date [Thu Feb 08 09:35:02 CST 2018]; root of context hierarchy
+2018-02-08 09:35:03.840  INFO 48812 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-02-08 09:35:04.301  INFO 48812 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
+2018-02-08 09:35:04.326  INFO 48812 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2018-02-08 09:35:04.415  WARN 48812 --- [main] io.undertow.websockets.jsr               : UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2018-02-08 09:35:04.415  WARN 48812 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2018-02-08 09:35:04.462  INFO 48812 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2018-02-08 09:35:04.462  INFO 48812 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1484 ms
+2018-02-08 09:35:04.488  WARN 48812 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is java.lang.RuntimeException: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.jersey.JerseyAutoConfiguration': Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jerseyConfig': Failed to introspect bean class [com.example.rest.JerseyConfig] for lookup method metadata: could not find class that it depends on; nested exception is java.lang.NoClassDefFoundError: org/glassfish/hk2/api/ServiceLocator
+2018-02-08 09:35:04.498  INFO 48812 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2018-02-08 09:35:04.511 ERROR 48812 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is java.lang.RuntimeException: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.jersey.JerseyAutoConfiguration': Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jerseyConfig': Failed to introspect bean class [com.example.rest.JerseyConfig] for lookup method metadata: could not find class that it depends on; nested exception is java.lang.NoClassDefFoundError: org/glassfish/hk2/api/ServiceLocator
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:137) ~[spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:537) ~[spring-context-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at com.example.rest.RestExampleApplication.main(RestExampleApplication.java:10) [classes!/:0.0.1-SNAPSHOT]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_144]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_144]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_144]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_144]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48) [rest-example-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87) [rest-example-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:50) [rest-example-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:51) [rest-example-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+Caused by: java.lang.RuntimeException: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.jersey.JerseyAutoConfiguration': Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jerseyConfig': Failed to introspect bean class [com.example.rest.JerseyConfig] for lookup method metadata: could not find class that it depends on; nested exception is java.lang.NoClassDefFoundError: org/glassfish/hk2/api/ServiceLocator
+	at io.undertow.servlet.core.DeploymentManagerImpl.deploy(DeploymentManagerImpl.java:241) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at org.springframework.boot.context.embedded.undertow.UndertowEmbeddedServletContainerFactory.createDeploymentManager(UndertowEmbeddedServletContainerFactory.java:412) ~[spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.context.embedded.undertow.UndertowEmbeddedServletContainerFactory.getEmbeddedServletContainer(UndertowEmbeddedServletContainerFactory.java:234) ~[spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.createEmbeddedServletContainer(EmbeddedWebApplicationContext.java:164) ~[spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:134) ~[spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	... 16 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.jersey.JerseyAutoConfiguration': Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jerseyConfig': Failed to introspect bean class [com.example.rest.JerseyConfig] for lookup method metadata: could not find class that it depends on; nested exception is java.lang.NoClassDefFoundError: org/glassfish/hk2/api/ServiceLocator
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:749) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:189) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1193) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1095) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:372) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:234) ~[spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:215) ~[spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addServletContextInitializerBeans(ServletContextInitializerBeans.java:91) ~[spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:79) ~[spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.getServletContextInitializerBeans(EmbeddedWebApplicationContext.java:241) ~[spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.selfInitialize(EmbeddedWebApplicationContext.java:228) ~[spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.access$000(EmbeddedWebApplicationContext.java:89) ~[spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext$1.onStartup(EmbeddedWebApplicationContext.java:213) ~[spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.context.embedded.undertow.UndertowEmbeddedServletContainerFactory$Initializer.onStartup(UndertowEmbeddedServletContainerFactory.java:722) ~[spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at io.undertow.servlet.core.DeploymentManagerImpl$1.call(DeploymentManagerImpl.java:192) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.core.DeploymentManagerImpl$1.call(DeploymentManagerImpl.java:174) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:42) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.core.DeploymentManagerImpl.deploy(DeploymentManagerImpl.java:239) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	... 20 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jerseyConfig': Failed to introspect bean class [com.example.rest.JerseyConfig] for lookup method metadata: could not find class that it depends on; nested exception is java.lang.NoClassDefFoundError: org/glassfish/hk2/api/ServiceLocator
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:269) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1118) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1091) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:835) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:741) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	... 52 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/glassfish/hk2/api/ServiceLocator
+	at java.lang.Class.getDeclaredMethods0(Native Method) ~[na:1.8.0_144]
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701) ~[na:1.8.0_144]
+	at java.lang.Class.getDeclaredMethods(Class.java:1975) ~[na:1.8.0_144]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:613) ~[spring-core-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:524) ~[spring-core-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:537) ~[spring-core-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:510) ~[spring-core-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:247) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	... 65 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.glassfish.hk2.api.ServiceLocator
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381) ~[na:1.8.0_144]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_144]
+	at org.springframework.boot.loader.LaunchedURLClassLoader.loadClass(LaunchedURLClassLoader.java:94) ~[rest-example-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_144]
+	... 73 common frames omitted
+
+2018-02-08 09:39:36.327  INFO 48830 --- [main] com.example.rest.RestExampleApplication  : Starting RestExampleApplication v0.0.1-SNAPSHOT on Andrews-MBP with PID 48830 (/Users/andrewsmith/workspaces/sandbox/rest-example/target/rest-example-0.0.1-SNAPSHOT.jar started by andrewsmith in /Users/andrewsmith/workspaces/sandbox/rest-example)
+2018-02-08 09:39:36.337 DEBUG 48830 --- [main] com.example.rest.RestExampleApplication  : Running with Spring Boot v1.5.10.RELEASE, Spring v4.3.14.RELEASE
+2018-02-08 09:39:36.337  INFO 48830 --- [main] com.example.rest.RestExampleApplication  : No active profile set, falling back to default profiles: default
+2018-02-08 09:39:36.407  INFO 48830 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1698c449: startup date [Thu Feb 08 09:39:36 CST 2018]; root of context hierarchy
+2018-02-08 09:39:37.271  INFO 48830 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-02-08 09:39:37.762  INFO 48830 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
+2018-02-08 09:39:37.786  INFO 48830 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2018-02-08 09:39:37.875  WARN 48830 --- [main] io.undertow.websockets.jsr               : UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2018-02-08 09:39:37.875  WARN 48830 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2018-02-08 09:39:37.905  INFO 48830 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2018-02-08 09:39:37.905  INFO 48830 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1504 ms
+2018-02-08 09:39:37.937  WARN 48830 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is java.lang.RuntimeException: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.jersey.JerseyAutoConfiguration': Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jerseyConfig' defined in URL [jar:file:/Users/andrewsmith/workspaces/sandbox/rest-example/target/rest-example-0.0.1-SNAPSHOT.jar!/BOOT-INF/classes!/com/example/rest/JerseyConfig.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.example.rest.JerseyConfig]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: jersey/repackaged/com/google/common/base/Function
+2018-02-08 09:39:37.944  INFO 48830 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2018-02-08 09:39:37.957 ERROR 48830 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is java.lang.RuntimeException: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.jersey.JerseyAutoConfiguration': Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jerseyConfig' defined in URL [jar:file:/Users/andrewsmith/workspaces/sandbox/rest-example/target/rest-example-0.0.1-SNAPSHOT.jar!/BOOT-INF/classes!/com/example/rest/JerseyConfig.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.example.rest.JerseyConfig]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: jersey/repackaged/com/google/common/base/Function
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:137) ~[spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:537) ~[spring-context-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at com.example.rest.RestExampleApplication.main(RestExampleApplication.java:10) [classes!/:0.0.1-SNAPSHOT]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_144]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_144]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_144]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_144]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48) [rest-example-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87) [rest-example-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:50) [rest-example-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:51) [rest-example-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+Caused by: java.lang.RuntimeException: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.jersey.JerseyAutoConfiguration': Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jerseyConfig' defined in URL [jar:file:/Users/andrewsmith/workspaces/sandbox/rest-example/target/rest-example-0.0.1-SNAPSHOT.jar!/BOOT-INF/classes!/com/example/rest/JerseyConfig.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.example.rest.JerseyConfig]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: jersey/repackaged/com/google/common/base/Function
+	at io.undertow.servlet.core.DeploymentManagerImpl.deploy(DeploymentManagerImpl.java:241) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at org.springframework.boot.context.embedded.undertow.UndertowEmbeddedServletContainerFactory.createDeploymentManager(UndertowEmbeddedServletContainerFactory.java:412) ~[spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.context.embedded.undertow.UndertowEmbeddedServletContainerFactory.getEmbeddedServletContainer(UndertowEmbeddedServletContainerFactory.java:234) ~[spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.createEmbeddedServletContainer(EmbeddedWebApplicationContext.java:164) ~[spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:134) ~[spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	... 16 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.jersey.JerseyAutoConfiguration': Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jerseyConfig' defined in URL [jar:file:/Users/andrewsmith/workspaces/sandbox/rest-example/target/rest-example-0.0.1-SNAPSHOT.jar!/BOOT-INF/classes!/com/example/rest/JerseyConfig.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.example.rest.JerseyConfig]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: jersey/repackaged/com/google/common/base/Function
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:749) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:189) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1193) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1095) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:372) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:234) ~[spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:215) ~[spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addServletContextInitializerBeans(ServletContextInitializerBeans.java:91) ~[spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:79) ~[spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.getServletContextInitializerBeans(EmbeddedWebApplicationContext.java:241) ~[spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.selfInitialize(EmbeddedWebApplicationContext.java:228) ~[spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.access$000(EmbeddedWebApplicationContext.java:89) ~[spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext$1.onStartup(EmbeddedWebApplicationContext.java:213) ~[spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at org.springframework.boot.context.embedded.undertow.UndertowEmbeddedServletContainerFactory$Initializer.onStartup(UndertowEmbeddedServletContainerFactory.java:722) ~[spring-boot-1.5.10.RELEASE.jar!/:1.5.10.RELEASE]
+	at io.undertow.servlet.core.DeploymentManagerImpl$1.call(DeploymentManagerImpl.java:192) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.core.DeploymentManagerImpl$1.call(DeploymentManagerImpl.java:174) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:42) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.core.DeploymentManagerImpl.deploy(DeploymentManagerImpl.java:239) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	... 20 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jerseyConfig' defined in URL [jar:file:/Users/andrewsmith/workspaces/sandbox/rest-example/target/rest-example-0.0.1-SNAPSHOT.jar!/BOOT-INF/classes!/com/example/rest/JerseyConfig.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.example.rest.JerseyConfig]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: jersey/repackaged/com/google/common/base/Function
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1155) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1099) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:835) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:741) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	... 52 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.example.rest.JerseyConfig]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: jersey/repackaged/com/google/common/base/Function
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:154) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:89) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1147) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	... 64 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: jersey/repackaged/com/google/common/base/Function
+	at org.glassfish.jersey.server.ResourceConfig.<init>(ResourceConfig.java:356) ~[jersey-server-2.25.1.jar!/:na]
+	at com.example.rest.JerseyConfig.<init>(JerseyConfig.java:15) ~[classes!/:0.0.1-SNAPSHOT]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_144]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_144]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_144]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_144]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:142) ~[spring-beans-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	... 66 common frames omitted
+Caused by: java.lang.ClassNotFoundException: jersey.repackaged.com.google.common.base.Function
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381) ~[na:1.8.0_144]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_144]
+	at org.springframework.boot.loader.LaunchedURLClassLoader.loadClass(LaunchedURLClassLoader.java:94) ~[rest-example-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_144]
+	... 73 common frames omitted
+
+2018-02-08 10:18:38.253  INFO 48886 --- [main] com.example.rest.RestExampleApplication  : Starting RestExampleApplication v0.0.1-SNAPSHOT on Andrews-MBP with PID 48886 (/Users/andrewsmith/workspaces/sandbox/rest-example/target/rest-example-0.0.1-SNAPSHOT.jar started by andrewsmith in /Users/andrewsmith/workspaces/sandbox/rest-example)
+2018-02-08 10:18:38.262 DEBUG 48886 --- [main] com.example.rest.RestExampleApplication  : Running with Spring Boot v1.5.10.RELEASE, Spring v4.3.14.RELEASE
+2018-02-08 10:18:38.263  INFO 48886 --- [main] com.example.rest.RestExampleApplication  : No active profile set, falling back to default profiles: default
+2018-02-08 10:18:38.329  INFO 48886 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1698c449: startup date [Thu Feb 08 10:18:38 CST 2018]; root of context hierarchy
+2018-02-08 10:18:39.184  INFO 48886 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-02-08 10:18:39.670  INFO 48886 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
+2018-02-08 10:18:39.696  INFO 48886 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2018-02-08 10:18:39.789  WARN 48886 --- [main] io.undertow.websockets.jsr               : UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2018-02-08 10:18:39.789  WARN 48886 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2018-02-08 10:18:39.820  INFO 48886 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2018-02-08 10:18:39.820  INFO 48886 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1494 ms
+2018-02-08 10:18:40.076  INFO 48886 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-02-08 10:18:40.077  INFO 48886 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-02-08 10:18:40.078  INFO 48886 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'com.example.rest.JerseyConfig' to [/*]
+2018-02-08 10:18:40.801  INFO 48886 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-02-08 10:18:40.820  INFO 48886 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-08 10:18:40.923  INFO 48886 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-02-08 10:18:40.925  INFO 48886 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-02-08 10:18:40.927  INFO 48886 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-02-08 10:18:40.982  INFO 48886 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-08 10:18:41.360  INFO 48886 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2018-02-08 10:18:41.626  INFO 48886 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2018-02-08 10:18:41.634  INFO 48886 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-02-08 10:18:41.673  INFO 48886 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-02-08 10:18:42.030  INFO 48886 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-02-08 10:18:42.109  INFO 48886 --- [main] b.c.e.u.UndertowEmbeddedServletContainer : Undertow started on port(s) 8080 (http)
+2018-02-08 10:18:42.116  INFO 48886 --- [main] com.example.rest.RestExampleApplication  : Started RestExampleApplication in 4.244 seconds (JVM running for 4.72)
+2018-02-08 10:19:06.218 ERROR 48886 --- [XNIO-2 task-1] io.undertow.request                      : UT005023: Exception handling request to /paragraphs/count-words
+
+java.lang.NoClassDefFoundError: org/jvnet/hk2/spring/bridge/api/SpringBridge
+	at org.glassfish.jersey.server.spring.SpringComponentProvider.initialize(SpringComponentProvider.java:108) ~[jersey-spring3-2.25.1.jar!/:na]
+	at org.glassfish.jersey.server.ApplicationHandler$4.get(ApplicationHandler.java:408) ~[jersey-server-2.25.1.jar!/:na]
+	at org.glassfish.jersey.server.ApplicationHandler$4.get(ApplicationHandler.java:399) ~[jersey-server-2.25.1.jar!/:na]
+	at org.glassfish.jersey.internal.util.collection.Values$LazyValueImpl.get(Values.java:340) ~[jersey-common-2.25.1.jar!/:na]
+	at org.glassfish.jersey.server.ApplicationHandler$3.call(ApplicationHandler.java:350) ~[jersey-server-2.25.1.jar!/:na]
+	at org.glassfish.jersey.server.ApplicationHandler$3.call(ApplicationHandler.java:347) ~[jersey-server-2.25.1.jar!/:na]
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315) ~[jersey-common-2.25.1.jar!/:na]
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297) ~[jersey-common-2.25.1.jar!/:na]
+	at org.glassfish.jersey.internal.Errors.processWithException(Errors.java:255) ~[jersey-common-2.25.1.jar!/:na]
+	at org.glassfish.jersey.server.ApplicationHandler.<init>(ApplicationHandler.java:347) ~[jersey-server-2.25.1.jar!/:na]
+	at org.glassfish.jersey.servlet.WebComponent.<init>(WebComponent.java:392) ~[jersey-container-servlet-core-2.25.1.jar!/:na]
+	at org.glassfish.jersey.servlet.ServletContainer.init(ServletContainer.java:177) ~[jersey-container-servlet-core-2.25.1.jar!/:na]
+	at org.glassfish.jersey.servlet.ServletContainer.init(ServletContainer.java:369) ~[jersey-container-servlet-core-2.25.1.jar!/:na]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158) ~[tomcat-embed-core-8.5.27.jar!/:8.5.27]
+	at io.undertow.servlet.core.LifecyleInterceptorInvocation.proceed(LifecyleInterceptorInvocation.java:117) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.core.ManagedServlet$DefaultInstanceStrategy.start(ManagedServlet.java:300) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.core.ManagedServlet.forceInit(ManagedServlet.java:207) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.ServletChain.forceInit(ServletChain.java:116) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:60) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:131) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43) ~[undertow-core-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46) ~[undertow-core-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60) ~[undertow-core-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43) ~[undertow-core-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43) ~[undertow-core-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43) ~[undertow-core-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43) [undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104) [undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:336) [undertow-core-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830) [undertow-core-1.4.22.Final.jar!/:1.4.22.Final]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_144]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_144]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_144]
+Caused by: java.lang.ClassNotFoundException: org.jvnet.hk2.spring.bridge.api.SpringBridge
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381) ~[na:1.8.0_144]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_144]
+	at org.springframework.boot.loader.LaunchedURLClassLoader.loadClass(LaunchedURLClassLoader.java:94) ~[rest-example-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_144]
+	... 44 common frames omitted
+
+2018-02-08 10:21:27.532  INFO 48886 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1698c449: startup date [Thu Feb 08 10:18:38 CST 2018]; root of context hierarchy
+2018-02-08 10:21:27.540  INFO 48886 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-02-08 10:21:27.541  INFO 48886 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-02-08 10:21:27.542  INFO 48886 --- [Thread-3] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2018-02-08 10:21:27.544  INFO 48886 --- [Thread-3] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-02-08 10:24:31.428  INFO 48911 --- [main] com.example.rest.RestExampleApplication  : Starting RestExampleApplication v0.0.1-SNAPSHOT on Andrews-MBP with PID 48911 (/Users/andrewsmith/workspaces/sandbox/rest-example/target/rest-example-0.0.1-SNAPSHOT.jar started by andrewsmith in /Users/andrewsmith/workspaces/sandbox/rest-example)
+2018-02-08 10:24:31.432 DEBUG 48911 --- [main] com.example.rest.RestExampleApplication  : Running with Spring Boot v1.5.10.RELEASE, Spring v4.3.14.RELEASE
+2018-02-08 10:24:31.432  INFO 48911 --- [main] com.example.rest.RestExampleApplication  : No active profile set, falling back to default profiles: default
+2018-02-08 10:24:31.503  INFO 48911 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1698c449: startup date [Thu Feb 08 10:24:31 CST 2018]; root of context hierarchy
+2018-02-08 10:24:32.389  INFO 48911 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-02-08 10:24:32.865  INFO 48911 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
+2018-02-08 10:24:32.888  INFO 48911 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2018-02-08 10:24:32.985  WARN 48911 --- [main] io.undertow.websockets.jsr               : UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2018-02-08 10:24:32.985  WARN 48911 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2018-02-08 10:24:33.013  INFO 48911 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2018-02-08 10:24:33.014  INFO 48911 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1515 ms
+2018-02-08 10:24:33.257  INFO 48911 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-02-08 10:24:33.259  INFO 48911 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-02-08 10:24:33.259  INFO 48911 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'com.example.rest.JerseyConfig' to [/*]
+2018-02-08 10:24:33.980  INFO 48911 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-02-08 10:24:34.003  INFO 48911 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-08 10:24:34.122  INFO 48911 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-02-08 10:24:34.124  INFO 48911 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-02-08 10:24:34.126  INFO 48911 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-02-08 10:24:34.192  INFO 48911 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-08 10:24:34.531  INFO 48911 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2018-02-08 10:24:34.794  INFO 48911 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2018-02-08 10:24:34.803  INFO 48911 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-02-08 10:24:34.844  INFO 48911 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-02-08 10:24:35.181  INFO 48911 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-02-08 10:24:35.261  INFO 48911 --- [main] b.c.e.u.UndertowEmbeddedServletContainer : Undertow started on port(s) 8080 (http)
+2018-02-08 10:24:35.266  INFO 48911 --- [main] com.example.rest.RestExampleApplication  : Started RestExampleApplication in 4.207 seconds (JVM running for 4.697)
+2018-02-08 10:24:42.311 ERROR 48911 --- [XNIO-2 task-1] io.undertow.request                      : UT005023: Exception handling request to /paragraphs/count-words
+
+java.lang.NoClassDefFoundError: com/fasterxml/jackson/jaxrs/json/JacksonJaxbJsonProvider
+	at org.glassfish.jersey.jackson.JacksonFeature.configure(JacksonFeature.java:85) ~[jersey-media-json-jackson-2.25.1.jar!/:na]
+	at org.glassfish.jersey.model.internal.CommonConfig.configureFeatures(CommonConfig.java:730) ~[jersey-common-2.25.1.jar!/:na]
+	at org.glassfish.jersey.model.internal.CommonConfig.configureMetaProviders(CommonConfig.java:648) ~[jersey-common-2.25.1.jar!/:na]
+	at org.glassfish.jersey.server.ResourceConfig.configureMetaProviders(ResourceConfig.java:829) ~[jersey-server-2.25.1.jar!/:na]
+	at org.glassfish.jersey.server.ApplicationHandler.initialize(ApplicationHandler.java:453) ~[jersey-server-2.25.1.jar!/:na]
+	at org.glassfish.jersey.server.ApplicationHandler.access$500(ApplicationHandler.java:184) ~[jersey-server-2.25.1.jar!/:na]
+	at org.glassfish.jersey.server.ApplicationHandler$3.call(ApplicationHandler.java:350) ~[jersey-server-2.25.1.jar!/:na]
+	at org.glassfish.jersey.server.ApplicationHandler$3.call(ApplicationHandler.java:347) ~[jersey-server-2.25.1.jar!/:na]
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315) ~[jersey-common-2.25.1.jar!/:na]
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297) ~[jersey-common-2.25.1.jar!/:na]
+	at org.glassfish.jersey.internal.Errors.processWithException(Errors.java:255) ~[jersey-common-2.25.1.jar!/:na]
+	at org.glassfish.jersey.server.ApplicationHandler.<init>(ApplicationHandler.java:347) ~[jersey-server-2.25.1.jar!/:na]
+	at org.glassfish.jersey.servlet.WebComponent.<init>(WebComponent.java:392) ~[jersey-container-servlet-core-2.25.1.jar!/:na]
+	at org.glassfish.jersey.servlet.ServletContainer.init(ServletContainer.java:177) ~[jersey-container-servlet-core-2.25.1.jar!/:na]
+	at org.glassfish.jersey.servlet.ServletContainer.init(ServletContainer.java:369) ~[jersey-container-servlet-core-2.25.1.jar!/:na]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158) ~[tomcat-embed-core-8.5.27.jar!/:8.5.27]
+	at io.undertow.servlet.core.LifecyleInterceptorInvocation.proceed(LifecyleInterceptorInvocation.java:117) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.core.ManagedServlet$DefaultInstanceStrategy.start(ManagedServlet.java:300) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.core.ManagedServlet.forceInit(ManagedServlet.java:207) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.ServletChain.forceInit(ServletChain.java:116) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:60) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:131) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43) ~[undertow-core-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46) ~[undertow-core-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60) ~[undertow-core-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43) ~[undertow-core-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43) ~[undertow-core-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43) ~[undertow-core-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43) [undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104) [undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:336) [undertow-core-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830) [undertow-core-1.4.22.Final.jar!/:1.4.22.Final]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_144]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_144]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_144]
+Caused by: java.lang.ClassNotFoundException: com.fasterxml.jackson.jaxrs.json.JacksonJaxbJsonProvider
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381) ~[na:1.8.0_144]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_144]
+	at org.springframework.boot.loader.LaunchedURLClassLoader.loadClass(LaunchedURLClassLoader.java:94) ~[rest-example-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_144]
+	... 46 common frames omitted
+
+2018-02-08 10:27:29.525  INFO 48911 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1698c449: startup date [Thu Feb 08 10:24:31 CST 2018]; root of context hierarchy
+2018-02-08 10:27:29.533  INFO 48911 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-02-08 10:27:29.533  INFO 48911 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-02-08 10:27:29.534  INFO 48911 --- [Thread-3] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2018-02-08 10:27:29.535  INFO 48911 --- [Thread-3] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-02-08 10:27:44.245  INFO 48932 --- [main] com.example.rest.RestExampleApplication  : Starting RestExampleApplication v0.0.1-SNAPSHOT on Andrews-MBP with PID 48932 (/Users/andrewsmith/workspaces/sandbox/rest-example/target/rest-example-0.0.1-SNAPSHOT.jar started by andrewsmith in /Users/andrewsmith/workspaces/sandbox/rest-example)
+2018-02-08 10:27:44.249 DEBUG 48932 --- [main] com.example.rest.RestExampleApplication  : Running with Spring Boot v1.5.10.RELEASE, Spring v4.3.14.RELEASE
+2018-02-08 10:27:44.249  INFO 48932 --- [main] com.example.rest.RestExampleApplication  : No active profile set, falling back to default profiles: default
+2018-02-08 10:27:44.331  INFO 48932 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1698c449: startup date [Thu Feb 08 10:27:44 CST 2018]; root of context hierarchy
+2018-02-08 10:27:45.266  INFO 48932 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-02-08 10:27:45.843  INFO 48932 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
+2018-02-08 10:27:45.874  INFO 48932 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2018-02-08 10:27:45.954  WARN 48932 --- [main] io.undertow.websockets.jsr               : UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2018-02-08 10:27:45.954  WARN 48932 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2018-02-08 10:27:45.991  INFO 48932 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2018-02-08 10:27:45.992  INFO 48932 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1665 ms
+2018-02-08 10:27:46.257  INFO 48932 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-02-08 10:27:46.259  INFO 48932 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-02-08 10:27:46.259  INFO 48932 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'com.example.rest.JerseyConfig' to [/*]
+2018-02-08 10:27:47.045  INFO 48932 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-02-08 10:27:47.067  INFO 48932 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-08 10:27:47.205  INFO 48932 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-02-08 10:27:47.207  INFO 48932 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-02-08 10:27:47.210  INFO 48932 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-02-08 10:27:47.287  INFO 48932 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-08 10:27:47.643  INFO 48932 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2018-02-08 10:27:47.910  INFO 48932 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2018-02-08 10:27:47.920  INFO 48932 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-02-08 10:27:47.962  INFO 48932 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-02-08 10:27:48.318  INFO 48932 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-02-08 10:27:48.403  INFO 48932 --- [main] b.c.e.u.UndertowEmbeddedServletContainer : Undertow started on port(s) 8080 (http)
+2018-02-08 10:27:48.409  INFO 48932 --- [main] com.example.rest.RestExampleApplication  : Started RestExampleApplication in 4.55 seconds (JVM running for 5.056)
+2018-02-08 10:27:52.613 ERROR 48932 --- [XNIO-2 task-1] io.undertow.request                      : UT005023: Exception handling request to /paragraphs/count-words
+
+java.lang.NoClassDefFoundError: com/fasterxml/jackson/jaxrs/json/JacksonJaxbJsonProvider
+	at org.glassfish.jersey.jackson.JacksonFeature.configure(JacksonFeature.java:85) ~[jersey-media-json-jackson-2.25.1.jar!/:na]
+	at org.glassfish.jersey.model.internal.CommonConfig.configureFeatures(CommonConfig.java:730) ~[jersey-common-2.25.1.jar!/:na]
+	at org.glassfish.jersey.model.internal.CommonConfig.configureMetaProviders(CommonConfig.java:648) ~[jersey-common-2.25.1.jar!/:na]
+	at org.glassfish.jersey.server.ResourceConfig.configureMetaProviders(ResourceConfig.java:829) ~[jersey-server-2.25.1.jar!/:na]
+	at org.glassfish.jersey.server.ApplicationHandler.initialize(ApplicationHandler.java:453) ~[jersey-server-2.25.1.jar!/:na]
+	at org.glassfish.jersey.server.ApplicationHandler.access$500(ApplicationHandler.java:184) ~[jersey-server-2.25.1.jar!/:na]
+	at org.glassfish.jersey.server.ApplicationHandler$3.call(ApplicationHandler.java:350) ~[jersey-server-2.25.1.jar!/:na]
+	at org.glassfish.jersey.server.ApplicationHandler$3.call(ApplicationHandler.java:347) ~[jersey-server-2.25.1.jar!/:na]
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315) ~[jersey-common-2.25.1.jar!/:na]
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297) ~[jersey-common-2.25.1.jar!/:na]
+	at org.glassfish.jersey.internal.Errors.processWithException(Errors.java:255) ~[jersey-common-2.25.1.jar!/:na]
+	at org.glassfish.jersey.server.ApplicationHandler.<init>(ApplicationHandler.java:347) ~[jersey-server-2.25.1.jar!/:na]
+	at org.glassfish.jersey.servlet.WebComponent.<init>(WebComponent.java:392) ~[jersey-container-servlet-core-2.25.1.jar!/:na]
+	at org.glassfish.jersey.servlet.ServletContainer.init(ServletContainer.java:177) ~[jersey-container-servlet-core-2.25.1.jar!/:na]
+	at org.glassfish.jersey.servlet.ServletContainer.init(ServletContainer.java:369) ~[jersey-container-servlet-core-2.25.1.jar!/:na]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158) ~[tomcat-embed-core-8.5.27.jar!/:8.5.27]
+	at io.undertow.servlet.core.LifecyleInterceptorInvocation.proceed(LifecyleInterceptorInvocation.java:117) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.core.ManagedServlet$DefaultInstanceStrategy.start(ManagedServlet.java:300) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.core.ManagedServlet.forceInit(ManagedServlet.java:207) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.ServletChain.forceInit(ServletChain.java:116) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:60) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:131) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43) ~[undertow-core-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46) ~[undertow-core-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60) ~[undertow-core-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43) ~[undertow-core-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43) ~[undertow-core-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43) ~[undertow-core-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43) [undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104) [undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:336) [undertow-core-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830) [undertow-core-1.4.22.Final.jar!/:1.4.22.Final]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_144]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_144]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_144]
+Caused by: java.lang.ClassNotFoundException: com.fasterxml.jackson.jaxrs.json.JacksonJaxbJsonProvider
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381) ~[na:1.8.0_144]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_144]
+	at org.springframework.boot.loader.LaunchedURLClassLoader.loadClass(LaunchedURLClassLoader.java:94) ~[rest-example-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_144]
+	... 46 common frames omitted
+
+2018-02-08 10:33:09.969  INFO 48932 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1698c449: startup date [Thu Feb 08 10:27:44 CST 2018]; root of context hierarchy
+2018-02-08 10:33:09.977  INFO 48932 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-02-08 10:33:09.978  INFO 48932 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-02-08 10:33:09.978  INFO 48932 --- [Thread-3] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2018-02-08 10:33:09.980  INFO 48932 --- [Thread-3] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-02-08 10:33:23.576  INFO 48961 --- [main] com.example.rest.RestExampleApplication  : Starting RestExampleApplication v0.0.1-SNAPSHOT on Andrews-MBP with PID 48961 (/Users/andrewsmith/workspaces/sandbox/rest-example/target/rest-example-0.0.1-SNAPSHOT.jar started by andrewsmith in /Users/andrewsmith/workspaces/sandbox/rest-example)
+2018-02-08 10:33:23.580 DEBUG 48961 --- [main] com.example.rest.RestExampleApplication  : Running with Spring Boot v1.5.10.RELEASE, Spring v4.3.14.RELEASE
+2018-02-08 10:33:23.580  INFO 48961 --- [main] com.example.rest.RestExampleApplication  : No active profile set, falling back to default profiles: default
+2018-02-08 10:33:23.658  INFO 48961 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1698c449: startup date [Thu Feb 08 10:33:23 CST 2018]; root of context hierarchy
+2018-02-08 10:33:24.616  INFO 48961 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-02-08 10:33:25.137  INFO 48961 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
+2018-02-08 10:33:25.176  INFO 48961 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2018-02-08 10:33:25.265  WARN 48961 --- [main] io.undertow.websockets.jsr               : UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2018-02-08 10:33:25.265  WARN 48961 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2018-02-08 10:33:25.310  INFO 48961 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2018-02-08 10:33:25.310  INFO 48961 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1656 ms
+2018-02-08 10:33:25.580  INFO 48961 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-02-08 10:33:25.581  INFO 48961 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-02-08 10:33:25.582  INFO 48961 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'com.example.rest.JerseyConfig' to [/*]
+2018-02-08 10:33:26.310  INFO 48961 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-02-08 10:33:26.337  INFO 48961 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-08 10:33:26.469  INFO 48961 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-02-08 10:33:26.472  INFO 48961 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-02-08 10:33:26.474  INFO 48961 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-02-08 10:33:26.569  INFO 48961 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-08 10:33:26.873  INFO 48961 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2018-02-08 10:33:27.111  INFO 48961 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2018-02-08 10:33:27.119  INFO 48961 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-02-08 10:33:27.156  INFO 48961 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-02-08 10:33:27.484  INFO 48961 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-02-08 10:33:27.559  INFO 48961 --- [main] b.c.e.u.UndertowEmbeddedServletContainer : Undertow started on port(s) 8080 (http)
+2018-02-08 10:33:27.564  INFO 48961 --- [main] com.example.rest.RestExampleApplication  : Started RestExampleApplication in 4.38 seconds (JVM running for 4.89)
+2018-02-08 10:33:29.850 ERROR 48961 --- [XNIO-2 task-1] io.undertow.request                      : UT005023: Exception handling request to /paragraphs/count-words
+
+java.lang.NoClassDefFoundError: org/glassfish/jersey/message/filtering/EntityFilteringFeature
+	at org.glassfish.jersey.jackson.JacksonFeature.configure(JacksonFeature.java:90) ~[jersey-media-json-jackson-2.25.1.jar!/:na]
+	at org.glassfish.jersey.model.internal.CommonConfig.configureFeatures(CommonConfig.java:730) ~[jersey-common-2.25.1.jar!/:na]
+	at org.glassfish.jersey.model.internal.CommonConfig.configureMetaProviders(CommonConfig.java:648) ~[jersey-common-2.25.1.jar!/:na]
+	at org.glassfish.jersey.server.ResourceConfig.configureMetaProviders(ResourceConfig.java:829) ~[jersey-server-2.25.1.jar!/:na]
+	at org.glassfish.jersey.server.ApplicationHandler.initialize(ApplicationHandler.java:453) ~[jersey-server-2.25.1.jar!/:na]
+	at org.glassfish.jersey.server.ApplicationHandler.access$500(ApplicationHandler.java:184) ~[jersey-server-2.25.1.jar!/:na]
+	at org.glassfish.jersey.server.ApplicationHandler$3.call(ApplicationHandler.java:350) ~[jersey-server-2.25.1.jar!/:na]
+	at org.glassfish.jersey.server.ApplicationHandler$3.call(ApplicationHandler.java:347) ~[jersey-server-2.25.1.jar!/:na]
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315) ~[jersey-common-2.25.1.jar!/:na]
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297) ~[jersey-common-2.25.1.jar!/:na]
+	at org.glassfish.jersey.internal.Errors.processWithException(Errors.java:255) ~[jersey-common-2.25.1.jar!/:na]
+	at org.glassfish.jersey.server.ApplicationHandler.<init>(ApplicationHandler.java:347) ~[jersey-server-2.25.1.jar!/:na]
+	at org.glassfish.jersey.servlet.WebComponent.<init>(WebComponent.java:392) ~[jersey-container-servlet-core-2.25.1.jar!/:na]
+	at org.glassfish.jersey.servlet.ServletContainer.init(ServletContainer.java:177) ~[jersey-container-servlet-core-2.25.1.jar!/:na]
+	at org.glassfish.jersey.servlet.ServletContainer.init(ServletContainer.java:369) ~[jersey-container-servlet-core-2.25.1.jar!/:na]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158) ~[tomcat-embed-core-8.5.27.jar!/:8.5.27]
+	at io.undertow.servlet.core.LifecyleInterceptorInvocation.proceed(LifecyleInterceptorInvocation.java:117) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.core.ManagedServlet$DefaultInstanceStrategy.start(ManagedServlet.java:300) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.core.ManagedServlet.forceInit(ManagedServlet.java:207) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.ServletChain.forceInit(ServletChain.java:116) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:60) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:131) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43) ~[undertow-core-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46) ~[undertow-core-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60) ~[undertow-core-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43) ~[undertow-core-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43) ~[undertow-core-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43) ~[undertow-core-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43) [undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104) [undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:336) [undertow-core-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830) [undertow-core-1.4.22.Final.jar!/:1.4.22.Final]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_144]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_144]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_144]
+Caused by: java.lang.ClassNotFoundException: org.glassfish.jersey.message.filtering.EntityFilteringFeature
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381) ~[na:1.8.0_144]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_144]
+	at org.springframework.boot.loader.LaunchedURLClassLoader.loadClass(LaunchedURLClassLoader.java:94) ~[rest-example-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_144]
+	... 46 common frames omitted
+
+2018-02-08 10:35:27.217  INFO 48961 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1698c449: startup date [Thu Feb 08 10:33:23 CST 2018]; root of context hierarchy
+2018-02-08 10:35:27.219  INFO 48961 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-02-08 10:35:27.220  INFO 48961 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-02-08 10:35:27.220  INFO 48961 --- [Thread-3] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2018-02-08 10:35:27.223  INFO 48961 --- [Thread-3] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-02-08 10:35:41.651  INFO 48984 --- [main] com.example.rest.RestExampleApplication  : Starting RestExampleApplication v0.0.1-SNAPSHOT on Andrews-MBP with PID 48984 (/Users/andrewsmith/workspaces/sandbox/rest-example/target/rest-example-0.0.1-SNAPSHOT.jar started by andrewsmith in /Users/andrewsmith/workspaces/sandbox/rest-example)
+2018-02-08 10:35:41.654 DEBUG 48984 --- [main] com.example.rest.RestExampleApplication  : Running with Spring Boot v1.5.10.RELEASE, Spring v4.3.14.RELEASE
+2018-02-08 10:35:41.654  INFO 48984 --- [main] com.example.rest.RestExampleApplication  : No active profile set, falling back to default profiles: default
+2018-02-08 10:35:41.733  INFO 48984 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1698c449: startup date [Thu Feb 08 10:35:41 CST 2018]; root of context hierarchy
+2018-02-08 10:35:42.679  INFO 48984 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-02-08 10:35:43.188  INFO 48984 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
+2018-02-08 10:35:43.211  INFO 48984 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2018-02-08 10:35:43.297  WARN 48984 --- [main] io.undertow.websockets.jsr               : UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2018-02-08 10:35:43.298  WARN 48984 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2018-02-08 10:35:43.333  INFO 48984 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2018-02-08 10:35:43.333  INFO 48984 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1603 ms
+2018-02-08 10:35:43.617  INFO 48984 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-02-08 10:35:43.618  INFO 48984 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-02-08 10:35:43.619  INFO 48984 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'com.example.rest.JerseyConfig' to [/*]
+2018-02-08 10:35:44.439  INFO 48984 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-02-08 10:35:44.463  INFO 48984 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-08 10:35:44.588  INFO 48984 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-02-08 10:35:44.590  INFO 48984 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-02-08 10:35:44.592  INFO 48984 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-02-08 10:35:44.673  INFO 48984 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-08 10:35:44.976  INFO 48984 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2018-02-08 10:35:45.248  INFO 48984 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2018-02-08 10:35:45.256  INFO 48984 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-02-08 10:35:45.296  INFO 48984 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-02-08 10:35:45.666  INFO 48984 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-02-08 10:35:45.749  INFO 48984 --- [main] b.c.e.u.UndertowEmbeddedServletContainer : Undertow started on port(s) 8080 (http)
+2018-02-08 10:35:45.756  INFO 48984 --- [main] com.example.rest.RestExampleApplication  : Started RestExampleApplication in 4.481 seconds (JVM running for 4.974)
+2018-02-08 10:35:50.675 DEBUG 48984 --- [XNIO-2 task-1] c.example.rest.service.ParagraphService  : Calculating word count for paragraph
+This is a paragraph, not a sentence.
+2018-02-08 10:35:50.675 DEBUG 48984 --- [XNIO-2 task-1] c.example.rest.service.ParagraphService  : Finished calculating word count, 6 unique words
+2018-02-08 10:36:14.244 DEBUG 48984 --- [XNIO-2 task-2] c.example.rest.service.GreetingService   : Retrieving greeting
+2018-02-08 10:36:19.996 DEBUG 48984 --- [XNIO-2 task-3] com.example.rest.service.NumberService   : Calculating the first 4 fibonacci numbers
+2018-02-08 10:36:26.197  INFO 48984 --- [XNIO-2 task-4] com.example.rest.service.ThreadService   : Waiting for deadlock to occur before detection
+2018-02-08 10:36:26.197  INFO 48984 --- [Thread-5] com.example.rest.service.ThreadService   : Thread2 obtained lock2
+2018-02-08 10:36:26.197  INFO 48984 --- [Thread-4] com.example.rest.service.ThreadService   : Thread1 obtained lock1
+2018-02-08 10:36:27.206  INFO 48984 --- [XNIO-2 task-4] com.example.rest.service.ThreadService   : Deadlock occurred in threads 32 and 31
+2018-02-08 10:36:32.137 DEBUG 48984 --- [XNIO-2 task-5] com.example.rest.client.PostClient       : Calling remote api https://jsonplaceholder.typicode.com/posts
+2018-02-08 10:36:32.739 ERROR 48984 --- [XNIO-2 task-5] io.undertow.request                      : UT005023: Exception handling request to /posts
+
+javax.servlet.ServletException: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Can not construct instance of com.example.rest.model.Post: no suitable constructor found, can not deserialize from Object value (missing default constructor or creator, or perhaps need to add/enable type information?); nested exception is com.fasterxml.jackson.databind.JsonMappingException: Can not construct instance of com.example.rest.model.Post: no suitable constructor found, can not deserialize from Object value (missing default constructor or creator, or perhaps need to add/enable type information?)
+ at [Source: java.io.PushbackInputStream@11372a54; line: 3, column: 5] (through reference chain: java.lang.Object[][0])
+	at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:489) ~[jersey-container-servlet-core-2.25.1.jar!/:na]
+	at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:427) ~[jersey-container-servlet-core-2.25.1.jar!/:na]
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:388) ~[jersey-container-servlet-core-2.25.1.jar!/:na]
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:341) ~[jersey-container-servlet-core-2.25.1.jar!/:na]
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:228) ~[jersey-container-servlet-core-2.25.1.jar!/:na]
+	at io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:74) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:129) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) ~[spring-web-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:64) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:131) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43) ~[undertow-core-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46) ~[undertow-core-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60) ~[undertow-core-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43) ~[undertow-core-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43) ~[undertow-core-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43) ~[undertow-core-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43) [undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81) ~[undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104) [undertow-servlet-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:336) [undertow-core-1.4.22.Final.jar!/:1.4.22.Final]
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830) [undertow-core-1.4.22.Final.jar!/:1.4.22.Final]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_144]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_144]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_144]
+Caused by: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Can not construct instance of com.example.rest.model.Post: no suitable constructor found, can not deserialize from Object value (missing default constructor or creator, or perhaps need to add/enable type information?); nested exception is com.fasterxml.jackson.databind.JsonMappingException: Can not construct instance of com.example.rest.model.Post: no suitable constructor found, can not deserialize from Object value (missing default constructor or creator, or perhaps need to add/enable type information?)
+ at [Source: java.io.PushbackInputStream@11372a54; line: 3, column: 5] (through reference chain: java.lang.Object[][0])
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:238) ~[spring-web-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:223) ~[spring-web-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.web.client.HttpMessageConverterExtractor.extractData(HttpMessageConverterExtractor.java:96) ~[spring-web-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:663) ~[spring-web-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:621) ~[spring-web-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at org.springframework.web.client.RestTemplate.getForObject(RestTemplate.java:295) ~[spring-web-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	at com.example.rest.client.PostClient.getPosts(PostClient.java:19) ~[classes!/:0.0.1-SNAPSHOT]
+	at com.example.rest.resource.PostResource.getPosts(PostResource.java:25) ~[classes!/:0.0.1-SNAPSHOT]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_144]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_144]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_144]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_144]
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81) ~[jersey-server-2.25.1.jar!/:na]
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144) ~[jersey-server-2.25.1.jar!/:na]
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161) ~[jersey-server-2.25.1.jar!/:na]
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160) ~[jersey-server-2.25.1.jar!/:na]
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99) ~[jersey-server-2.25.1.jar!/:na]
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389) ~[jersey-server-2.25.1.jar!/:na]
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347) ~[jersey-server-2.25.1.jar!/:na]
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102) ~[jersey-server-2.25.1.jar!/:na]
+	at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326) ~[jersey-server-2.25.1.jar!/:na]
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271) ~[jersey-common-2.25.1.jar!/:na]
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267) ~[jersey-common-2.25.1.jar!/:na]
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315) ~[jersey-common-2.25.1.jar!/:na]
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297) ~[jersey-common-2.25.1.jar!/:na]
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:267) ~[jersey-common-2.25.1.jar!/:na]
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317) ~[jersey-common-2.25.1.jar!/:na]
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305) ~[jersey-server-2.25.1.jar!/:na]
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154) ~[jersey-server-2.25.1.jar!/:na]
+	at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:473) ~[jersey-container-servlet-core-2.25.1.jar!/:na]
+	... 42 common frames omitted
+Caused by: com.fasterxml.jackson.databind.JsonMappingException: Can not construct instance of com.example.rest.model.Post: no suitable constructor found, can not deserialize from Object value (missing default constructor or creator, or perhaps need to add/enable type information?)
+ at [Source: java.io.PushbackInputStream@11372a54; line: 3, column: 5] (through reference chain: java.lang.Object[][0])
+	at com.fasterxml.jackson.databind.JsonMappingException.from(JsonMappingException.java:270) ~[jackson-databind-2.8.10.jar!/:2.8.10]
+	at com.fasterxml.jackson.databind.DeserializationContext.instantiationException(DeserializationContext.java:1456) ~[jackson-databind-2.8.10.jar!/:2.8.10]
+	at com.fasterxml.jackson.databind.DeserializationContext.handleMissingInstantiator(DeserializationContext.java:1012) ~[jackson-databind-2.8.10.jar!/:2.8.10]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromObjectUsingNonDefault(BeanDeserializerBase.java:1206) ~[jackson-databind-2.8.10.jar!/:2.8.10]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:314) ~[jackson-databind-2.8.10.jar!/:2.8.10]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:148) ~[jackson-databind-2.8.10.jar!/:2.8.10]
+	at com.fasterxml.jackson.databind.deser.std.ObjectArrayDeserializer.deserialize(ObjectArrayDeserializer.java:196) ~[jackson-databind-2.8.10.jar!/:2.8.10]
+	at com.fasterxml.jackson.databind.deser.std.ObjectArrayDeserializer.deserialize(ObjectArrayDeserializer.java:20) ~[jackson-databind-2.8.10.jar!/:2.8.10]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:3814) ~[jackson-databind-2.8.10.jar!/:2.8.10]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2938) ~[jackson-databind-2.8.10.jar!/:2.8.10]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:235) ~[spring-web-4.3.14.RELEASE.jar!/:4.3.14.RELEASE]
+	... 71 common frames omitted
+
+2018-02-08 10:37:44.783  INFO 48984 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1698c449: startup date [Thu Feb 08 10:35:41 CST 2018]; root of context hierarchy
+2018-02-08 10:37:44.785  INFO 48984 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-02-08 10:37:44.786  INFO 48984 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-02-08 10:37:44.786  INFO 48984 --- [Thread-3] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2018-02-08 10:37:44.787  INFO 48984 --- [Thread-3] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-02-08 10:38:04.225  INFO 49006 --- [main] com.example.rest.RestExampleApplication  : Starting RestExampleApplication v0.0.1-SNAPSHOT on Andrews-MBP with PID 49006 (/Users/andrewsmith/workspaces/sandbox/rest-example/target/rest-example-0.0.1-SNAPSHOT.jar started by andrewsmith in /Users/andrewsmith/workspaces/sandbox/rest-example)
+2018-02-08 10:38:04.229 DEBUG 49006 --- [main] com.example.rest.RestExampleApplication  : Running with Spring Boot v1.5.10.RELEASE, Spring v4.3.14.RELEASE
+2018-02-08 10:38:04.230  INFO 49006 --- [main] com.example.rest.RestExampleApplication  : No active profile set, falling back to default profiles: default
+2018-02-08 10:38:04.304  INFO 49006 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1698c449: startup date [Thu Feb 08 10:38:04 CST 2018]; root of context hierarchy
+2018-02-08 10:38:05.186  INFO 49006 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-02-08 10:38:05.713  INFO 49006 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
+2018-02-08 10:38:05.743  INFO 49006 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2018-02-08 10:38:05.830  WARN 49006 --- [main] io.undertow.websockets.jsr               : UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2018-02-08 10:38:05.831  WARN 49006 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2018-02-08 10:38:05.859  INFO 49006 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2018-02-08 10:38:05.859  INFO 49006 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1559 ms
+2018-02-08 10:38:06.109  INFO 49006 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-02-08 10:38:06.111  INFO 49006 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-02-08 10:38:06.111  INFO 49006 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'com.example.rest.JerseyConfig' to [/*]
+2018-02-08 10:38:06.805  INFO 49006 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-02-08 10:38:06.826  INFO 49006 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-08 10:38:06.947  INFO 49006 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-02-08 10:38:06.950  INFO 49006 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-02-08 10:38:06.952  INFO 49006 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-02-08 10:38:07.018  INFO 49006 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-08 10:38:07.357  INFO 49006 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2018-02-08 10:38:07.628  INFO 49006 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2018-02-08 10:38:07.636  INFO 49006 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-02-08 10:38:07.677  INFO 49006 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-02-08 10:38:08.029  INFO 49006 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-02-08 10:38:08.110  INFO 49006 --- [main] b.c.e.u.UndertowEmbeddedServletContainer : Undertow started on port(s) 8080 (http)
+2018-02-08 10:38:08.115  INFO 49006 --- [main] com.example.rest.RestExampleApplication  : Started RestExampleApplication in 4.262 seconds (JVM running for 4.755)
+2018-02-08 10:38:14.832 DEBUG 49006 --- [XNIO-2 task-1] com.example.rest.client.PostClient       : Calling remote api https://jsonplaceholder.typicode.com/posts
+2018-02-08 10:48:02.999  INFO 49006 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1698c449: startup date [Thu Feb 08 10:38:04 CST 2018]; root of context hierarchy
+2018-02-08 10:48:03.007  INFO 49006 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-02-08 10:48:03.008  INFO 49006 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-02-08 10:48:03.008  INFO 49006 --- [Thread-3] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2018-02-08 10:48:03.010  INFO 49006 --- [Thread-3] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-02-08 11:35:23.993  INFO 49109 --- [main] com.example.rest.RestExampleApplication  : Starting RestExampleApplication v0.0.1-SNAPSHOT on Andrews-MBP with PID 49109 (/Users/andrewsmith/workspaces/sandbox/rest-example/target/rest-example-0.0.1-SNAPSHOT.jar started by andrewsmith in /Users/andrewsmith/workspaces/sandbox/rest-example)
+2018-02-08 11:35:24.002 DEBUG 49109 --- [main] com.example.rest.RestExampleApplication  : Running with Spring Boot v1.5.10.RELEASE, Spring v4.3.14.RELEASE
+2018-02-08 11:35:24.003  INFO 49109 --- [main] com.example.rest.RestExampleApplication  : No active profile set, falling back to default profiles: default
+2018-02-08 11:35:24.065  INFO 49109 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1698c449: startup date [Thu Feb 08 11:35:24 CST 2018]; root of context hierarchy
+2018-02-08 11:35:24.944  INFO 49109 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-02-08 11:35:25.487  INFO 49109 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
+2018-02-08 11:35:25.511  INFO 49109 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2018-02-08 11:35:25.605  WARN 49109 --- [main] io.undertow.websockets.jsr               : UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2018-02-08 11:35:25.605  WARN 49109 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2018-02-08 11:35:25.637  INFO 49109 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2018-02-08 11:35:25.638  INFO 49109 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1576 ms
+2018-02-08 11:35:25.905  INFO 49109 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-02-08 11:35:25.906  INFO 49109 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-02-08 11:35:25.907  INFO 49109 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'com.example.rest.JerseyConfig' to [/*]
+2018-02-08 11:35:26.648  INFO 49109 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-02-08 11:35:26.672  INFO 49109 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-08 11:35:26.797  INFO 49109 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-02-08 11:35:26.799  INFO 49109 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-02-08 11:35:26.802  INFO 49109 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-02-08 11:35:26.879  INFO 49109 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-08 11:35:27.216  INFO 49109 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2018-02-08 11:35:27.501  INFO 49109 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2018-02-08 11:35:27.510  INFO 49109 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-02-08 11:35:27.554  INFO 49109 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-02-08 11:35:27.919  INFO 49109 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-02-08 11:35:28.007  INFO 49109 --- [main] b.c.e.u.UndertowEmbeddedServletContainer : Undertow started on port(s) 8080 (http)
+2018-02-08 11:35:28.012  INFO 49109 --- [main] com.example.rest.RestExampleApplication  : Started RestExampleApplication in 4.365 seconds (JVM running for 4.844)
+2018-02-08 11:36:17.940 DEBUG 49109 --- [XNIO-2 task-1] c.example.rest.service.GreetingService   : Retrieving greeting
+2018-02-08 11:37:03.771 DEBUG 49109 --- [XNIO-2 task-2] c.example.rest.service.ParagraphService  : Calculating word count for paragraph
+The ineffective applicant rips the bicycle. Can the untidy temper tack our agenda? Should your schedule blink in the destined bias? Throughout the expanding hydrogen abides a latter temple.
+2018-02-08 11:37:03.772 DEBUG 49109 --- [XNIO-2 task-2] c.example.rest.service.ParagraphService  : Finished calculating word count, 25 unique words
+2018-02-08 11:39:45.713 DEBUG 49109 --- [XNIO-2 task-3] c.example.rest.service.ParagraphService  : Calculating word count for paragraph
+The ineffective applicant rips the bicycle. Can the untidy temper tack our agenda? Should your schedule blink in the destined bias? Throughout the expanding hydrogen abides a latter temple. Rip the bicycle.
+2018-02-08 11:39:45.714 DEBUG 49109 --- [XNIO-2 task-3] c.example.rest.service.ParagraphService  : Finished calculating word count, 26 unique words
+2018-02-08 11:40:41.111 DEBUG 49109 --- [XNIO-2 task-4] com.example.rest.service.NumberService   : Calculating the first 12 fibonacci numbers
+2018-02-08 11:41:29.580 DEBUG 49109 --- [XNIO-2 task-5] com.example.rest.service.NumberService   : Calculating the first 12 fibonacci numbers
+2018-02-08 11:41:41.198  INFO 49109 --- [XNIO-2 task-6] com.example.rest.service.ThreadService   : Waiting for deadlock to occur before detection
+2018-02-08 11:41:41.198  INFO 49109 --- [Thread-4] com.example.rest.service.ThreadService   : Thread1 obtained lock1
+2018-02-08 11:41:41.198  INFO 49109 --- [Thread-5] com.example.rest.service.ThreadService   : Thread2 obtained lock2
+2018-02-08 11:41:42.201  INFO 49109 --- [XNIO-2 task-6] com.example.rest.service.ThreadService   : Deadlock occurred in threads 34 and 33
+2018-02-08 11:42:19.457 DEBUG 49109 --- [XNIO-2 task-7] com.example.rest.client.PostClient       : Calling remote api https://jsonplaceholder.typicode.com/posts
