@@ -12,6 +12,10 @@ public class CarService {
 	@Autowired
 	private CarRepository repository;
 	
+	public void setRepository(CarRepository repository) {
+		this.repository = repository;
+	}
+	
 	public long create(Car car) {
 		Car newCar = repository.save(car);
 		return newCar.getId();
