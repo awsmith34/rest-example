@@ -88,6 +88,29 @@ The posts endpoint calls the remote service at https://jsonplaceholder.typicode.
 curl http://localhost:8080/posts
 ```
 
+### Cars Endpoint
+The cars endpoint manages a automobile repository.
+
+Create
+```
+curl -H "Content-Type: application/json" -X POST -d '{ "make":"Acura","model":"TL","year":"2012","color":"BLUE" }' http://localhost:8080/cars
+```
+
+Update
+```
+curl -H "Content-Type: application/json" -X PUT -d '{ "make":"Acura","model":"TL","year":"2012","color":"RED" }' http://localhost:8080/cars
+```
+
+Get
+```
+curl http://localhost:8080/cars/2
+```
+
+Delete
+```
+curl -X DELETE http://localhost:8080/cars/4
+```
+
 ## Built With
 
 * [Maven](https://maven.apache.org/) - Dependency Management
