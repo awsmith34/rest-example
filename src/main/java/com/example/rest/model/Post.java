@@ -1,5 +1,7 @@
 package com.example.rest.model;
 
+import java.util.Objects;
+
 public class Post {
 	private int userId;
 	private int id;
@@ -53,8 +55,8 @@ public class Post {
 		int result = 1;
 		result = 31 * result + userId;
 		result = 31 * result + id;
-		result = 31 * result + title != null ? title.hashCode() : 0;
-		result = 31 * result + body != null ? body.hashCode() : 0;
+		result = 31 * result + (title != null ? title.hashCode() : 0);
+		result = 31 * result + (body != null ? body.hashCode() : 0);
 		return result;
 	}
 
@@ -66,17 +68,13 @@ public class Post {
 		if (this == object) {
 			return true;
 		}
+
 		Post other = (Post) object;
 
 		return userId == other.getUserId() &&
 				id == other.getId() &&
-				areEqual(title, other.getTitle()) &&
-				areEqual(body, other.getBody());
+				Objects.equals(title, other.getTitle()) &&
+				Objects.equals(body, other.getBody());
 	}
 
-	private boolean areEqual(String s1, String s2) {
-		return s1 == null ? s2 == null : s1.equals(s2);
-	}
-	
-	
 }

@@ -16,11 +16,15 @@ import com.example.rest.service.GreetingService;
 public class GreetingResource {
 	
 	@Autowired
-	GreetingService greetingService;
+	GreetingService service;
 	
 	@GET
 	@Produces(MediaType.TEXT_PLAIN)
 	public Response getGreeting() {
-		return Response.ok(greetingService.getGreeting()).build();
+		return Response.ok(service.getGreeting()).build();
+	}
+
+	public void setGreetingService(GreetingService service) {
+		this.service = service;
 	}
 }

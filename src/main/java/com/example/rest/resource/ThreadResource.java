@@ -16,14 +16,18 @@ import com.example.rest.service.ThreadService;
 public class ThreadResource {
 	
 	@Autowired
-	private ThreadService threadService;
+	private ThreadService service;
 
 	@POST
 	@Path("/deadlock")
 	@Produces(MediaType.TEXT_PLAIN)
 	public Response deadlock() {
-		threadService.startDeadlock();
-		String message = threadService.detectDeadlock();
+		service.startDeadlock();
+		String message = service.detectDeadlock();
 		return Response.ok(message).build();
+	}
+
+	public void setThreadService(ThreadService service) {
+		this.service = service;
 	}
 }

@@ -23,16 +23,20 @@ import com.example.rest.service.ParagraphService;
 public class ParagraphResource {
 
 	@Autowired
-	private ParagraphService paragraphService;
+	private ParagraphService service;
 
 	@POST
 	@Path("/count-words")
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response countWords(Paragraph paragraph) {
-		Map<String, Integer> wordMap = paragraphService.getWordCount(paragraph);
+		Map<String, Integer> wordMap = service.getWordCount(paragraph);
 		List<WordCount> wordList = wordMap.entrySet().stream().map(e -> new WordCount(e.getKey(), e.getValue()))
 				.collect(Collectors.toList());
 		return Response.ok(wordList).build();
+	}
+
+	public void setParagraphService(ParagraphService service) {
+		this.service = service;
 	}
 }

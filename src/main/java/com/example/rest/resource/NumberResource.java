@@ -20,7 +20,7 @@ import com.example.rest.service.NumberService;
 public class NumberResource {
 	
 	@Autowired
-	private NumberService numberService;
+	private NumberService service;
 	
 	@POST
 	@Path("/fibonacci/{count}")
@@ -28,7 +28,7 @@ public class NumberResource {
 	public Response getFibonacciNumbers(@PathParam("count") Integer count) {
 		List<Long> numbers;
 		try {
-			numbers = numberService.getFibonacciNumbers(count);
+			numbers = service.getFibonacciNumbers(count);
 		}
 		catch (InvalidNumberException e) {
 			return Response
@@ -39,5 +39,9 @@ public class NumberResource {
 		}
 
 		return Response.ok(numbers).build();
+	}
+
+	public void setNumberService(NumberService service) {
+		this.service = service;
 	}
 }

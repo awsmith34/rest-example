@@ -98,7 +98,7 @@ curl -H "Content-Type: application/json" -X POST -d '{ "make":"Acura","model":"T
 
 Update
 ```
-curl -H "Content-Type: application/json" -X PUT -d '{ "make":"Acura","model":"TL","year":"2012","color":"RED" }' http://localhost:8080/cars
+curl -H "Content-Type: application/json" -X PUT -d '{ "make":"Acura","model":"TL","year":"2012","color":"RED" }' http://localhost:8080/cars/3
 ```
 
 Get
